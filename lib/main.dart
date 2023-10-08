@@ -9,8 +9,8 @@ import 'package:provider/provider.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // Initialize ElevenLabs
-  OpenAI.apiKey = "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";
-  await ElevenLabs.init(apiKey: "02494362668b3289ba4e5ee77dc42f37");
+  OpenAI.apiKey = "api";
+  await ElevenLabs.init(apiKey: "api");
   runApp(const MyApp());
 }
 
