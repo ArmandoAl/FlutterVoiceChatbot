@@ -1,5 +1,6 @@
 // ignore_for_file: file_names, avoid_print
 import 'dart:typed_data';
+import 'package:flutter/material.dart';
 import 'package:her_record/Providers/MainProvider.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:http/http.dart' as http;
@@ -10,6 +11,9 @@ Future speakText(MainProvider provider) async {
     final player = AudioPlayer();
     final bytes = await _fetch(provider.textChatGpt);
     player.setAudioSource(MyCustomSource(bytes));
+    provider.currentImage = const AssetImage(
+      "lib/images/Cimaboi-talk.gif",
+    );
     player.play();
   } catch (ex) {
     print('Error: $ex');

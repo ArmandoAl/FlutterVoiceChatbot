@@ -23,6 +23,10 @@ class MainProvider extends ChangeNotifier {
   String text = '';
   String textChatGpt = '';
 
+  AssetImage currentImage = const AssetImage(
+    "lib/images/Cimaboi-idle.gif",
+  );
+
   List<OpenAIChatCompletionChoiceMessageModel> messages = [
     const OpenAIChatCompletionChoiceMessageModel(
       content:
@@ -38,6 +42,9 @@ class MainProvider extends ChangeNotifier {
   }
 
   Future<void> start() async {
+    currentImage = const AssetImage(
+      "lib/images/Cimaboi-idleTOthink.gif",
+    );
     await startRecorder(this);
     notifyListeners();
   }
@@ -48,6 +55,9 @@ class MainProvider extends ChangeNotifier {
   }
 
   Future<void> recognize() async {
+    currentImage = const AssetImage(
+      "lib/images/Cimaboi-think.gif",
+    );
     await recognizeVoice(this);
     messages.add(
       OpenAIChatCompletionChoiceMessageModel(
@@ -70,8 +80,18 @@ class MainProvider extends ChangeNotifier {
   }
 
   Future<void> speak() async {
+    currentImage = const AssetImage(
+      "lib/images/Cimaboi-ideaTOtalk.gif",
+    );
     await speakText(this);
     renderLoading = false;
+    notifyListeners();
+  }
+
+  Future<void> backToBegginImage() async {
+    currentImage = const AssetImage(
+      "lib/images/Cimaboi-idle.gif",
+    );
     notifyListeners();
   }
 }
