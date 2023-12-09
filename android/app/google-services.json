@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1010777045063",
+    "project_id": "herrecord-adfd0",
+    "storage_bucket": "herrecord-adfd0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010777045063:android:236b58f25e0b4ad78c1962",
+        "android_client_info": {
+          "package_name": "com.example.her_record"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYTjbB5QnDcYRLvTP3HgUAGi2ncoUeT_Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -14,9 +14,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   dart_openai: ^3.0.0
   elevenlabs: ^1.0.10
+  firebase_core: ^2.20.0
   flutter:
     sdk: flutter
-  flutter_sound:
+  flutter_sound: null
   http: null
   just_audio: null
   permission_handler: null
